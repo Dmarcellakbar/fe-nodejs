@@ -10,7 +10,7 @@
           <label class="form-label">Password</label>
           <input v-model="password" type="password" class="form-control" required />
         </div>
-        <button type="submit" class="btn btn-primary mr-2">Login</button>
+        <button type="submit" class="btn btn-primary mr-4">Login</button>
         <router-link to="/register">Go to Register</router-link>
       </form>
       <div v-if="error" class="alert alert-danger mt-3">{{ error }}</div>
