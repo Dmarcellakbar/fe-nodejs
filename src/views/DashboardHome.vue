@@ -5,11 +5,11 @@
         <div
           v-for="(item, index) in timelineItems"
           :key="index"
-          class="timeline-item mb-0 d-flex align-items-start"
+          class="timeline-item pb-2 d-flex align-items-start"
         >
           <div class="me-4">
-            <img :src="item.image" alt="image" class="rounded" width="200" height="200" />
-          </div>
+            <img :src="item.image" alt="image" class="rounded img-fixed-square" />
+        </div>
           <div>
             <h5 class="mb-1">{{ item.title }} - {{ item.category }}</h5>
             <small class="text-muted">{{ item.date }}</small>
@@ -76,5 +76,11 @@ onMounted(() => {
     left: -10px;
     top: 10px;
   }
+
+.img-fixed-square {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
   </style>
   

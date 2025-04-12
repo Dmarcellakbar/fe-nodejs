@@ -4,7 +4,7 @@ export default {
   async upload(file) {
     const formData = new FormData();
     formData.append('file', file); // 'file' matches the backend
-
+    
     const response = await fetch(API_URL, {
       method: 'POST',
       headers: {
