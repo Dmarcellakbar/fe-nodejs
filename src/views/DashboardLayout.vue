@@ -3,7 +3,7 @@
       <!-- Sidebar -->
       <div class="bg-light p-3 vh-100" style="width: 250px">
         <h4 class="mb-4">Dashboard</h4>
-        <h5 class="mb-4">{{ user.first_name }} {{ user.last_name }}</h5>
+        <h5 class="mb-4">{{ userLog.first_name }} {{ userLog.last_name }}</h5>
         <ul class="nav flex-column">
           <li class="nav-item">
             <router-link to="/dashboard" class="nav-link">Home</router-link>
@@ -31,8 +31,11 @@
   
   <script setup>
   import { useAuth } from '../services/useAuth'
+  import { ref } from 'vue'
 
-    const { user, logout } = useAuth()
+  const userLog = ref(JSON.parse(localStorage.getItem('userme') || '{}'))
+
+    const { logout } = useAuth()
 
   </script>
   

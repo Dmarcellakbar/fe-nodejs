@@ -33,7 +33,6 @@
         email: email.value,
         password: password.value
       })
-      console.log('res', res)
       localStorage.setItem('token', res.data.token)
       localStorage.setItem('userme', JSON.stringify(res.data))
       router.push('/dashboard')
