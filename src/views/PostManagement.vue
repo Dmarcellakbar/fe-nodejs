@@ -63,7 +63,7 @@
                 <label class="form-label">Preview</label>
                 <div>
                     <img
-                    :src="imagePreview || `http://165.154.208.223:5004/${selectedPost.image_file_path}`"
+                    :src="imagePreview || `http://localhost:5004/${selectedPost.image_file_path}`"
                     alt="Image Preview"
                     class="img-fluid"
                     style="max-height: 200px"
